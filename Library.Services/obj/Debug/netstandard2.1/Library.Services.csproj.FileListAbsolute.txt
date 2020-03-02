@@ -1,0 +1,15 @@
+C:\Source\Library\Library.Services\bin\Debug\netstandard2.1\Library.Domain.dll
+C:\Source\Library\Library.Services\obj\Debug\netstandard2.1\Library.Services.AssemblyInfoInputs.cache
+C:\Source\Library\Library.Services\obj\Debug\netstandard2.1\Library.Services.AssemblyInfo.cs
+C:\Source\Library\Library.Services\bin\Debug\netstandard2.1\Library.Services.deps.json
+C:\Source\Library\Library.Services\bin\Debug\netstandard2.1\Library.Services.dll
+C:\Source\Library\Library.Services\bin\Debug\netstandard2.1\Library.Services.pdb
+C:\Source\Library\Library.Services\bin\Debug\netstandard2.1\Library.Data.dll
+C:\Source\Library\Library.Services\bin\Debug\netstandard2.1\Library.Services.Abstractions.dll
+C:\Source\Library\Library.Services\bin\Debug\netstandard2.1\Library.Data.pdb
+C:\Source\Library\Library.Services\bin\Debug\netstandard2.1\Library.Domain.pdb
+C:\Source\Library\Library.Services\bin\Debug\netstandard2.1\Library.Services.Abstractions.pdb
+C:\Source\Library\Library.Services\obj\Debug\netstandard2.1\Library.Services.csprojAssemblyReference.cache
+C:\Source\Library\Library.Services\obj\Debug\netstandard2.1\Library.Services.csproj.CopyComplete
+C:\Source\Library\Library.Services\obj\Debug\netstandard2.1\Library.Services.dll
+C:\Source\Library\Library.Services\obj\Debug\netstandard2.1\Library.Services.pdb
