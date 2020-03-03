@@ -1,5 +1,0 @@
-C:\Source\Library\Library.Services.Abstractions\bin\Debug\netstandard2.0\Library.Services.Abstractions.deps.json
-C:\Source\Library\Library.Services.Abstractions\bin\Debug\netstandard2.0\Library.Services.Abstractions.dll
-C:\Source\Library\Library.Services.Abstractions\obj\Debug\netstandard2.0\Library.Services.Abstractions.csprojAssemblyReference.cache
-C:\Source\Library\Library.Services.Abstractions\obj\Debug\netstandard2.0\Library.Services.Abstractions.AssemblyInfoInputs.cache
-C:\Source\Library\Library.Services.Abstractions\obj\Debug\netstandard2.0\Library.Services.Abstractions.AssemblyInfo.cs

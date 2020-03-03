@@ -1,5 +1,0 @@
-C:\Source\Library\Library.Data\bin\Debug\netstandard2.0\Library.Data.deps.json
-C:\Source\Library\Library.Data\bin\Debug\netstandard2.0\Library.Data.dll
-C:\Source\Library\Library.Data\obj\Debug\netstandard2.0\Library.Data.csprojAssemblyReference.cache
-C:\Source\Library\Library.Data\obj\Debug\netstandard2.0\Library.Data.AssemblyInfoInputs.cache
-C:\Source\Library\Library.Data\obj\Debug\netstandard2.0\Library.Data.AssemblyInfo.cs

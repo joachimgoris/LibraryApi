@@ -433,3 +433,24 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/rider,dotnetcore,visualstudio
+Library.API/bin/
+
+Library.API/obj/
+
+Library.Data/bin/
+
+Library.Data/obj/
+
+Library.Domain/bin/
+
+Library.Domain/obj/
+
+Library.Dto/obj/
+
+Library.Services/bin/
+
+Library.Services/obj/
+
+Library.Services.Abstractions/bin/
+
+Library.Services.Abstractions/obj/
