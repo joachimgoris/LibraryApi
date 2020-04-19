@@ -1,7 +1,9 @@
-﻿namespace Library.Domain
+﻿using System;
+
+namespace Library.Domain
 {
     public class Entity
     {
-        public string Id { get; set; } = System.Guid.NewGuid().ToString();
+        public Guid Id { get; set; } = System.Guid.NewGuid();
     }
 }

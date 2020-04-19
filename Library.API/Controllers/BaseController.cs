@@ -1,4 +1,5 @@
-﻿using Library.Data;
+﻿using AutoMapper;
+using Library.Data;
 using Library.Domain;
 using Library.Services.Abstractions;
 using Microsoft.AspNetCore.Mvc;
@@ -8,15 +9,17 @@ using System.Threading.Tasks;
 
 namespace Library.API.Controllers
 {
-    public class BaseController<T, TService> : ControllerBase, IBaseController<T>
+    public class BaseController<T, TService, TReadDto, TCreateDto, TModifyDto> : ControllerBase, IBaseController<T, TReadDto, TCreateDto, TModifyDto>
         where T : Entity
         where TService : IBaseService<T, LibraryContext>
     {
         public TService _service;
+        public IMapper _mapper;
 
-        public BaseController(TService service)
+        public BaseController(TService service, IMapper mapper)
         {
             _service = service;
+            _mapper = mapper;
         }
 
         [HttpDelete]
@@ -28,28 +31,28 @@ namespace Library.API.Controllers
         }
 
         [HttpGet("{entityID}")]
-        public virtual async Task<ActionResult<T>> Get(string entityID)
+        public virtual async Task<ActionResult<TReadDto>> Get(string entityID)
         {
             var result = await _service.GetAsync(entityID);
             if (result == null) return NotFound();
 
-            return Ok(result);
+            return Ok(_mapper.Map<TReadDto>(result));
         }
 
         [HttpGet]
-        public virtual async Task<ActionResult<ICollection<T>>> GetAll()
+        public virtual async Task<ActionResult<ICollection<TReadDto>>> GetAll()
         {
             var result = await _service.GetAll().ToListAsync();
-
-            return Ok(result);
+            
+            return Ok(_mapper.Map<List<TReadDto>>(result));
         }
 
         [HttpPatch]
-        public virtual async Task<ActionResult<T>> Patch([FromBody] T entity)
+        public virtual async Task<IActionResult> Patch([FromBody] TModifyDto entity)
         {
-            var result = await Task.Run(() => _service.Update(entity)).ConfigureAwait(true);
+            await Task.Run(() => _service.Update(_mapper.Map<T>(entity))).ConfigureAwait(true);
 
-            return Ok(result);
+            return NoContent();
         }
 
         [HttpPost]
@@ -62,7 +65,7 @@ namespace Library.API.Controllers
         }
 
         [HttpPut]
-        public virtual async Task<ActionResult<T>> Put([FromBody] T entity)
+        public virtual async Task<IActionResult> Put([FromBody] T entity)
         {
             var result = await Task.Run(() => _service.Update(entity)).ConfigureAwait(true);
 

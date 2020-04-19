@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 
 namespace Library.API.Controllers
 {
-    interface IBaseController<T>
+    interface IBaseController<T, TReadDto, TCreateDto, TModifyDto>
         where T : Entity
     {
-        Task<IActionResult> Post([FromBody]T entity);
+        Task<IActionResult> Post([FromBody]TCreateDto entity);
 
-        Task<ActionResult<T>> Get(string entityID);
+        Task<ActionResult<TReadDto>> Get(string entityID);
 
-        Task<ActionResult<ICollection<T>>> GetAll();
+        Task<ActionResult<ICollection<TReadDto>>> GetAll();
 
-        Task<ActionResult<T>> Patch([FromBody]T entity);
+        Task<IActionResult> Patch([FromBody]TModifyDto entity);
 
-        Task<ActionResult<T>> Put([FromBody]T entity);
+        Task<IActionResult> Put([FromBody]T entity);
 
         Task<IActionResult> Delete(string entityID);
     }
